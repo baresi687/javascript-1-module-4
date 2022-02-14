@@ -39,7 +39,21 @@ async function makeApiCall() {
 
         console.log(results);
 
-        //TODO we will make a for loop here to loop on the results
+        // TODO we will make a for loop here to loop on the results
+
+        for (let i = 0; i < results.length; i++) {
+            if (!results[i].name || !results[i].image) {
+                continue;
+            }
+            resultsContainer.innerHTML +=
+            `
+            <div class="card">
+                <h4>${results[i].name}</h4>
+                <img src="${results[i].image}" alt="${results[i].name}"/>
+            </div>
+            `
+        }
+
 
 
     } catch (error) {
@@ -49,5 +63,3 @@ async function makeApiCall() {
 }
 
 makeApiCall();
-
-

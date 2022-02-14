@@ -19,7 +19,16 @@ async function callApi() {
     const JSONResponse = await response.json();
 
     console.log(JSONResponse);
+    const results = JSONResponse.results;
+    console.log(results);
 
+    results.forEach((item) => {
+        resultsContainer.innerHTML += `<div>${item.name}</div>`;
+    })
+
+   /* for (const item of results) {
+        resultsContainer.innerHTML += `<div>${item.name}</div>`;
+    }*/
 
 }
 
