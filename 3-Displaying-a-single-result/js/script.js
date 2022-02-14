@@ -36,10 +36,10 @@ async function fetchGame() {
 
 fetchGame();
 
-function createHTML (details) {
+function createHTML (gameDetails) {
     container.innerHTML = `
-        <h1 class="details-title">${details.name}</h1>
-        <div class="details-image" style="background-image: url('${details.background_image}')"></div>
-        <p class="details-description">Description: ${details.description}</p>
-        <time class="details-date">Time Released: ${details.released} </time>`
+        <h1 class="details-title">${gameDetails.name}</h1>
+        <div class="details-image" style="background-image: url('${gameDetails.background_image}')"></div>
+        <p class="details-description">Description: ${gameDetails.description}</p>
+        <time class="details-date">Time Released: ${gameDetails.released} </time>`
 }
